@@ -1,19 +1,36 @@
-import argparse        
+#!/usr/bin/env python3
+
+# MIT License
+# copyright (c) 2021 Klaus Mezger, ECOM Engineering
+import argparse
 
 ''' Simple python 3.x shutdown control using switch and LED
 
+This script allows a controlled shutdown.
+Switch:
+    press >5 seconds:  secure system shutdown is triggered
+    double click:      secure shutdown and restart
+LED:
+    turns on, as soon as raspberry is ready
+    turns off, as soon as controlled power down is compleded
+
 For help use commandline "python s_shut.py -h"
-For auto start call script from file /etc/rc.local (full path)
+For auto start call script from file /etc/rc.local:
+    /home/pi/Projects/Utils/Shutdown/Debug/./s_shut.py
 
 Hardware component used:
     * 330Ohm resistor
     * Low current (green) LED
     * SPST switch 
 Connections:
-    Raspi output port --> LED(anode)-LED(cathode) --> resistor --> GND
-    Raspi input Port --> switch --> GND
+    * Raspi output port --> LED(anode)-LED(cathode) --> resistor --> GND
+    * Raspi input Port --> switch --> GND
+    * [optional, if not programmed in config.txt) Raspi input Port --> 10kOhm resistor to 3.3V]
+Prerequisites, if no external pullup for switch:
+    * Enable internal pullup on input port on bottom in file /boot/config.txt
+        #set GPIO20 as input with pullup high
+        gpio=20=ip,pu 
     
-
 '''
 
 
