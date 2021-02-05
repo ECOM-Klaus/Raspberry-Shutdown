@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-# MIT License
+# MIT License see https://opensource.org/licenses/MIT
 # copyright (c) 2021 Klaus Mezger, ECOM Engineering
 import argparse
 
 ''' Simple python 3.x shutdown control using switch and LED
 
-This script allows a controlled shutdown.
+This script allows a controlled shutdown preventing SD-Card damage
 Switch:
     press >5 seconds:  secure system shutdown is triggered
     double click:      secure shutdown and restart
@@ -33,7 +33,6 @@ Prerequisites, if no external pullup for switch:
     
 '''
 
-
 def getArgs():
     '''Read arguments from command line'''
 
@@ -51,7 +50,9 @@ def getArgs():
     parser.add_argument("-p", "--powerPort", type=int, metavar='',
                         help='Optional bcm port for external power timer')
 
-    args=parser.parse_args()
+    args=parser.parse_args() #the args are "public variables" used below
+    
+    # Start now the event handler
     portHandler(args)
 
 def portHandler(ports):
