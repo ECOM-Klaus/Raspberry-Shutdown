@@ -29,7 +29,7 @@ System shuts down and activates a selectable port until no more SD card access o
 This is only achievable by external power off and on again.
 (A much more convenient solution is using the "UPS-2" project, that will follow here in the first Quarter 2021)
 
-**Project Components**
+## Project Components
 - The python script **s_shut.py**
 - A  push button switch
 - A high efficiency LED
