@@ -189,8 +189,7 @@ Use parameter **-p**:
 
 
 
-Copyright (C) 2020 Klaus Mezger under [MIT license](https://opensource.org/licenses/MIT)
-Version Feb 17, 2020 
+Copyright (C) 2021 Klaus Mezger under [MIT license](https://opensource.org/licenses/MIT)
 
 < written with https://typora.io/ >
 
