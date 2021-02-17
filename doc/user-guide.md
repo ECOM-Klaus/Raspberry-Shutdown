@@ -104,7 +104,7 @@ Required material: (example types)
 - Tactile Switch 		Tyco FSM8J
 - Green LED 3mm 	Kingbright L-7104SGC
 
-![s_shut-hardware](F:\kDrive\Projekte\Raspberry\Shutdown\doc\s_shut-hardware.png)
+![s_shut-hardware](s_shut-hardware.png)
 
    **Fig. 1**: Wiring Diagram with default ports.
 
